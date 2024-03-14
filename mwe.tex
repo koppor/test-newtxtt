@@ -1,44 +1,4 @@
-\documentclass{article}
-\usepackage{cmap}
-\usepackage{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[full]{textcomp}
-\usepackage[english,ngerman]{babel}
-\babelprovide[hyphenrules=ngerman-x-latest]{ngerman}
-\usepackage[defaultsups]{newtxtext}
-\usepackage{newtxmath}
-\usepackage[zerostyle=b,scaled=.9,straightquotes]{newtxtt}
-\usepackage{url}
-\usepackage[%
-final,%
-tracking=smallcaps,%
-expansion=alltext,%
-protrusion=alltext-nott]{microtype}%
-
-\SetTracking{encoding=*,shape=sc}{50}%
-\DeclareFontFamily{U}{MnSymbolC}{}
-\DeclareSymbolFont{MnSyC}{U}{MnSymbolC}{m}{n}
-\DeclareFontShape{U}{MnSymbolC}{m}{n}{
-    <-6>  MnSymbolC5
-   <6-7>  MnSymbolC6
-   <7-8>  MnSymbolC7
-   <8-9>  MnSymbolC8
-   <9-10> MnSymbolC9
-  <10-12> MnSymbolC10
-  <12->   MnSymbolC12%
-}{}
-\DeclareMathSymbol{\powerset}{\mathord}{MnSyC}{180}
-
-\usepackage{amsmath}
-\usepackage{etoolbox}
-\usepackage{graphicx}
-\usepackage{eso-pic}
-\usepackage{grffile}
-\usepackage{fancyhdr}
-\usepackage{listings}
-\usepackage{enumitem}
-\usepackage[hang]{footmisc}
-
+\documentclass[]{lni}
 \begin{document}
 Test: \url{test}
 \end{document}
