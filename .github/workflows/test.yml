@@ -1,6 +1,10 @@
 name: test
 
 on:
+  push:
+    branches:
+      - main
+  pull_request:
   workflow_dispatch:
     inputs:
       cache_version:
