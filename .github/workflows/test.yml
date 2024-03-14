@@ -1,0 +1,27 @@
+name: test
+
+on:
+  workflow_dispatch:
+    inputs:
+      cache_version:
+        description: 'Cache version for install-texlive'
+        default: '0'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  cache:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+          show-progress: ''
+      - name: Install TeX Live
+        uses: zauguin/install-texlive@v3
+        with:
+           package_file: Texlivefile
+           cache_version: ${{ github.event.inputs.cache_version }}
+      - run: pdflatex mwe.tex
